@@ -18,4 +18,13 @@
     <scope>test</scope>
 </dependency>
 </dependencies>
+<build>
+    <plugins>
+        <plugin>
+            <groupId>com.microsoft.playwright</groupId>
+            <artifactId>playwright-maven-plugin</artifactId>
+            <version>1.44.0</version>
+        </plugin>
+    </plugins>
+</build>
 </project>

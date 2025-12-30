@@ -20,9 +20,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Install Playwright Browsers
-        run: mvn playwright:install
-
       - name: Run TestNG Tests
         env:
           PW_USERNAME: ${{ secrets.PW_USERNAME }}

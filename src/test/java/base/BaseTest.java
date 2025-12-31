@@ -21,12 +21,12 @@ public class BaseTest {
 		playwright=Playwright.create();
 		String browserName=ConfigReader.getProperty("browser");
 		if(browserName.equalsIgnoreCase("chromium")) {
-			browser=playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+			browser=playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
 			
 		}
 		else
 		{
-			browser=playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
+			browser=playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(true));
 		}
 		page=browser.newPage();
 		page.navigate(ConfigReader.getProperty("url"));
